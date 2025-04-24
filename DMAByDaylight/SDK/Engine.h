@@ -13,7 +13,7 @@ private:
 	uint64_t MaxPacket;
 	uint64_t OwningGameInstance = 0x1c8; // World -> OwningGameInstance
 	uint64_t PersistentLevel = 0x38; // World  -> PersistentLevel
-	uint64_t GWorld = 0x0A9AA4C0;
+	uint64_t GWorld = 0xA9B0680;
 	uint64_t LocalPlayers = 0x40; // GameInstance -> LocalPlayers
 	uint64_t PlayerController = 0x38; // Player -> PlayerController
 	uint64_t AcknowledgedPawn = 0x350;	// Playercontroller -> AcknowledgedPawn
