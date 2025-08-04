@@ -15,10 +15,10 @@ private:
 	uint64_t Class = 0;
 	EPlayerRole PlayerRole;
 	uint64_t PlayerState = 0x2C0; // Pawn -> PlayerState
-	uint64_t AcknowledgedPawn = 0x2f8;
-	uint64_t RootComponent = 0x1A8; // Actor -> RootComponent
-	uint64_t RelativeLocation = 0x150; // SceneComponent -> RelativeLocation
-	uint64_t GameRole = 0x3fa; // DBDPlayerState -> GameRole
+	uint64_t AcknowledgedPawn = 0x350;
+	uint64_t RootComponent = 0x1B0; // Actor -> RootComponent
+	uint64_t RelativeLocation = 0x148; // SceneComponent -> RelativeLocation
+	uint64_t GameRole = 0x39a; // DBDPlayerState -> GameRole
 	std::wstring Name = LIT(L"Entity");
 	UEVector UEPosition;
 	Vector3 Position;

@@ -7,22 +7,22 @@ class Engine
 {
 
 private:
-	uint64_t OwningActorOffset = 0xA0; // NetConnection -> OwningActor
-	uint64_t MaxPacketOffset = 0xA8; // NetConnection -> MaxPacket
-	uint64_t OwningActor;
-	uint64_t MaxPacket;
-	uint64_t OwningGameInstance = 0x1c8; // World -> OwningGameInstance
-	uint64_t PersistentLevel = 0x38; // World  -> PersistentLevel
-	uint64_t GWorld = 0xAA718B0;
-	uint64_t LocalPlayers = 0x40; // GameInstance -> LocalPlayers
-	uint64_t PlayerController = 0x38; // Player -> PlayerController
-	uint64_t AcknowledgedPawn = 0x350;	// Playercontroller -> AcknowledgedPawn
-	uint64_t CameraManager = 0x360; // PlayerController -> PlayerCameraManager
-	uint64_t CameraCachePrivate = 0x0; // PlayerCameraManager -> CameraCachePrivate
-	uint64_t CameraCachePrivateOffset = 0x22D0; // PlayerCameraManager -> CameraCachePrivate
-	CameraCacheEntry CameraEntry; // ScriptStruct Engine.CameraCacheEntry
-	MinimalViewInfo CameraViewInfo; // ScriptStruct Engine.MinimalViewInfo
-	std::vector<std::shared_ptr<ActorEntity>> Actors;
+    uint64_t OwningActorOffset = 0xA8; // NetConnection -> OwningActor
+    uint64_t MaxPacketOffset = 0xB0; // NetConnection -> MaxPacket
+    uint64_t OwningActor;
+    uint64_t MaxPacket;
+    uint64_t OwningGameInstance = 0x1E8; // World -> OwningGameInstance
+    uint64_t PersistentLevel = 0x38; // World  -> PersistentLevel
+    uint64_t GWorld = 0xB6BEE70;
+    uint64_t LocalPlayers = 0x40; // GameInstance -> LocalPlayers
+    uint64_t PlayerController = 0x38; // Player -> PlayerController
+    uint64_t AcknowledgedPawn = 0x350;
+    uint64_t CameraManager = 0x360; // PlayerController -> PlayerCameraManager
+    uint64_t CameraCachePrivate = 0x0; // PlayerCameraManager -> CameraCachePrivate
+    uint64_t CameraCachePrivateOffset = 0x13B0; // PlayerCameraManager -> CameraCachePrivate
+    CameraCacheEntry CameraEntry; // ScriptStruct Engine.CameraCacheEntry
+    MinimalViewInfo CameraViewInfo; // ScriptStruct Engine.MinimalViewInfo
+    std::vector<std::shared_ptr<ActorEntity>> Actors;
 public:
 	Engine();
 	void Cache();
